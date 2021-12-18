@@ -1,0 +1,16 @@
+<h1>Convert xls (xlsx)</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_tag(excell_file_convert_url, method: "post") do %>
+      <%= label_tag(:first_row, "first row:") %>
+      <%= text_field_tag(:first_row) %>
+
+      <br><br>
+      <%= text_area_tag(:encoded_base64, "Hi, put base64 string here", size: "200x10") %>
+      <br><br>
+
+      <%= submit_tag("Convert") %>
+    <% end %>
+  </div>
+</div>
